@@ -54,6 +54,11 @@ img {
   display: flex;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* ==================COMPONENTS================= */
 .logo {
   font-family: var(--secondary-font);
@@ -71,29 +76,50 @@ img {
   letter-spacing: 0.03em;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ==================/COMPONENTS================= */
 
 /* ==================HEADER================= */
 .header {
-  padding-top: 32px;
-  padding-bottom: 32px;
   border-bottom: 1px solid #ececec;
 }
-
-.header .flex-container {
+.header-content {
   justify-content: space-between;
   align-items: center;
 }
 
+.header .navigation {
+  align-items: center;
+}
+
+.logo {
+  margin-right: 90px;
+}
+
 .logo-span-header {
   color: var(--main-color);
-  margin-right: 90px;
 }
 
 .menu-list .menu-item:not(:last-child) {
   margin-right: 50px;
 }
 .menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -110,8 +136,8 @@ img {
   color: var(--accent-color);
 }
 
-.contact-mail-header {
-  margin-right: 50px;
+.contact-list {
+  column-gap: 50px;
 }
 
 .contact-mail-header,
@@ -132,14 +158,15 @@ img {
 
 /* ==================HERO================= */
 .hero-section {
-  height: 600px;
+  padding: 0;
   background-color: var(--add-background);
 }
 
-.hero-section.flex-container {
+.hero-content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 600px;
 }
 
 .main-page-title {
@@ -180,17 +207,14 @@ img {
 /* ==================/HERO================= */
 
 /* ==================SECTION BENEFITS================= */
-.benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.benefits-list {
-  justify-content: space-between;
-}
 
 .benefits-list-item {
   flex-basis: 23.08%;
+  margin-right: 30px;
+}
+
+.benefits-list-item:last-child {
+  margin-right: 0;
 }
 
 .benefit-name {
@@ -211,14 +235,14 @@ img {
 /* ==================SECTION ABOUT-US================= */
 
 .about-us {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 .reg-section-title {
   margin-bottom: 50px;
 }
 
 .about-us .list {
-  justify-content: space-between;
+  column-gap: 30px;
 }
 
 /* ==================/SECTION ABOUT-US================= */
@@ -226,13 +250,11 @@ img {
 /* ==================SECTION OUR-TEAM================= */
 
 .our-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--our-team-sec-bg);
 }
 
 .our-team-list {
-  justify-content: space-between;
+  column-gap: 30px;
 }
 .our-team-list-item {
   background-color: var(--bg-page-color);
@@ -241,8 +263,8 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-member-img {
-  margin-bottom: 30px;
+.team-member-description {
+  padding: 30px 0;
 }
 .team-member-title {
   margin-bottom: 10px;
@@ -254,7 +276,6 @@ img {
 }
 
 .team-member-subtitle {
-  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -264,12 +285,9 @@ img {
 /* ==================/SECTION OUR-TEAM================= */
 
 /* ==================PORTFOLIO================= */
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 9px;
-}
+
 .portfolio-action-list {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
   column-gap: 8px;
 }
@@ -284,7 +302,6 @@ img {
 
 .portfolio-list-item {
   width: 370px;
-  padding-bottom: 20px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -297,13 +314,15 @@ img {
   margin-bottom: 0;
 }
 
-.portfolio-item-title,
-.portfolio-item-subtitle {
-  padding-left: 24px;
-  padding-right: 24px;
+.portfolio-item-description {
+  padding: 24px 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
+
 .portfolio-item-title {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .portfolio-button {
@@ -346,9 +365,6 @@ img {
 /* ==================FOOTER================= */
 .footer {
   background-color: var(--add-background);
-}
-
-.footer-block {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -362,10 +378,13 @@ img {
   font-style: normal;
 }
 
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .physical-address,
 .contact-mail-footer,
 .contact-phone-number-footer {
-  margin-bottom: 9px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--bg-page-color);
@@ -375,9 +394,6 @@ img {
   color: var(--main-footer-color);
 }
 
-.contact-phone-number-footer {
-  margin-bottom: 0;
-}
 .contact-mail-footer:hover,
 .contact-mail-footer:focus,
 .contact-phone-number-footer:hover,

@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container flex-container">
+      <div class="header-content container flex-container">
         <nav class="navigation flex-container">
           <a class="logo link" href="#" lang="en"
             >Web<span class="logo-span-header">Studio</span></a
@@ -52,74 +52,81 @@
       </div>
     </header>
     <main>
-      <section class="hero-section flex-container">
-        <h1 class="main-page-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="modal-button" type="button">Замовити послугу</button>
+      <section class="section hero-section">
+        <div class="hero-content flex-container">
+          <h1 class="main-page-title">Ефективні рішення для вашого бізнесу</h1>
+          <button class="modal-button" type="button">Замовити послугу</button>
+        </div>
       </section>
 
-      <section class="benefits container">
-        <h2 hidden>Наші переваги</h2>
-        <ul class="benefits-list list flex-container">
-          <li class="benefits-list-item">
-            <h3 class="benefit-name">УВАГА ДО ДЕТАЛЕЙ</h3>
-            <p class="benefit-description">
-              Ідейні міркування, і навіть початок повсякденної роботи з
-              формування позиції.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefit-name">ПУНКТУАЛЬНІСТЬ</h3>
-            <p class="benefit-description">
-              Завдання організації, особливо рамки і місце навчання кадрів тягне
-              у себе.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefit-name">ПЛАНУВАННЯ</h3>
-            <p class="benefit-description">
-              Так само консультація з широким активом значною мірою зумовлює.
-            </p>
-          </li>
-          <li class="benefits-list-item">
-            <h3 class="benefit-name">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-            <p class="benefit-description">
-              Значимість цих проблем настільки очевидна, що реалізація планових
-              завдань.
-            </p>
-          </li>
-        </ul>
+      <section class="section benefits">
+        <div class="container">
+          <h2 class="visually-hidden">Наші переваги</h2>
+          <ul class="benefits-list list flex-container">
+            <li class="benefits-list-item">
+              <h3 class="benefit-name">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="benefit-description">
+                Ідейні міркування, і навіть початок повсякденної роботи з
+                формування позиції.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefit-name">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="benefit-description">
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefit-name">ПЛАНУВАННЯ</h3>
+              <p class="benefit-description">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </li>
+            <li class="benefits-list-item">
+              <h3 class="benefit-name">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="benefit-description">
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="about-us container">
-        <h2 class="reg-section-title">Чим ми займаємося</h2>
-        <ul class="list flex-container">
-          <li>
-            <img
-              src="./images/about-us/web-site-developement.jpg"
-              alt="розробка сайту"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/about-us/adaptable-design.jpg"
-              alt="адаптивний дизайн"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/about-us/stylization.jpg"
-              alt="стилізация веб-сторінки"
-              width="370"
-              height="294"
-            />
-          </li>
-        </ul>
+      <section class="section about-us">
+        <div class="container">
+          <h2 class="reg-section-title">Чим ми займаємося</h2>
+          <ul class="list flex-container">
+            <li>
+              <img
+                src="./images/about-us/web-site-developement.jpg"
+                alt="розробка сайту"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/about-us/adaptable-design.jpg"
+                alt="адаптивний дизайн"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/about-us/stylization.jpg"
+                alt="стилізация веб-сторінки"
+                width="370"
+                height="294"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="our-team">
+
+      <section class="section our-team">
         <div class="container">
           <h2 class="reg-section-title">Наша команда</h2>
           <ul class="our-team-list list flex-container">
@@ -131,8 +138,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Ігор Дем'яненко</h3>
-              <p class="team-member-subtitle" lang="en">Product Designer</p>
+              <div class="team-member-description">
+                <h3 class="team-member-title">Ігор Дем'яненко</h3>
+                <p class="team-member-subtitle" lang="en">Product Designer</p>
+              </div>
             </li>
             <li class="our-team-list-item">
               <img
@@ -142,8 +151,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Ольга Рєпіна</h3>
-              <p class="team-member-subtitle" lang="en">Frontend Developer</p>
+              <div class="team-member-description">
+                <h3 class="team-member-title">Ольга Рєпіна</h3>
+                <p class="team-member-subtitle" lang="en">Frontend Developer</p>
+              </div>
             </li>
             <li class="our-team-list-item">
               <img
@@ -153,8 +164,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Микола Тарасов</h3>
-              <p class="team-member-subtitle" lang="en">Marketing</p>
+              <div class="team-member-description">
+                <h3 class="team-member-title">Микола Тарасов</h3>
+                <p class="team-member-subtitle" lang="en">Marketing</p>
+              </div>
             </li>
             <li class="our-team-list-item">
               <img
@@ -164,8 +177,10 @@
                 width="270"
                 height="260"
               />
-              <h3 class="team-member-title">Михайло Єрмаков</h3>
-              <p class="team-member-subtitle" lang="en">UI Designer</p>
+              <div class="team-member-description">
+                <h3 class="team-member-title">Михайло Єрмаков</h3>
+                <p class="team-member-subtitle" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -178,8 +193,8 @@
           >Web<span class="logo-span-footer">Studio</span></a
         >
         <address class="address">
-          <ul class="list">
-            <li>
+          <ul class="list address-list">
+            <li class="address-item">
               <a
                 class="physical-address link"
                 href="https://goo.gl/maps/PeYhesqvmwBexrzR6"
@@ -188,12 +203,12 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="address-item">
               <a class="contact-mail-footer link" href="mailto:info@example.com"
                 >info@example.com</a
               >
             </li>
-            <li>
+            <li class="address-item">
               <a
                 class="contact-phone-number-footer link"
                 href="tel:+380991111111"
